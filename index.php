@@ -15,6 +15,11 @@
             <form action="" method="post">
                 <div class="form">
                     <div class="form-left">
+                        <div class="studentName">
+                            <label for="fname">รหัสนักศึกษา : </label>
+                            <br>
+                            <input type="text" name="stdId" class="stdId inputText" placeholder="640000000-1">
+                        </div>
                         <div class="firstName">
                             <label for="fname">รหัสนักศึกษา : </label>
                             <br>
