@@ -11,10 +11,20 @@
     margin: 0;
     font-family: 'Prompt', sans-serif;
 }
+.svg-text {
+    font-size: 7em;
+    fill: #233E8B;
+}
 
 .container {
     width: 80vw;
     margin: 0 auto;
+}
+
+.topic {
+    position: relative;
+    top: 10%;
+    font-size: 200%;
 }
 
 .form {
@@ -38,7 +48,9 @@
     border-radius: 10px;
     height: 50px;
     margin-top: 10px;
+    padding: 5px;
     border: 1px solid var(--color-black);
+    box-sizing: border-box;
     transition: .2s;
 }
 
