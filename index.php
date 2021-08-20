@@ -33,13 +33,13 @@
                     </div>
                     <div class="major-grade">
                         <div class="major">
-                            <label for="majorName">สาขาวิชา : </label>
+                            <label for="majorName">หลักสูตร : </label>
                             <br>
                             <input value="วิทยาการคอมพิวเตอร์ (CS)" id="inputmajor" list="major" class="major inputText">
                             <datalist id="major">
                                 <option value="วิทยาการคอมพิวเตอร์ (CS)">
                                 <option value="เทคโนโลยีสารสนเทศ (IT)">
-                                <option value="ภูมิสารสนเทศศาสตร์(GIS)">
+                                <option value="ภูมิสารสนเทศศาสตร์ (GIS)">
                             </datalist>
                         </div>
                         <div class="grade">
@@ -63,11 +63,11 @@
                     <div class="comment">
                         <label for="commentName">คำอวยพร :</label>
                         <br>
-                        <textarea name="comment" id="comment" class="commentInput" rows="13"></textarea>
-                    </div>
-                    <button class="btn btn-save" onclick="insertComment()">บันทึก</button>
-                </div>
+                        <textarea name="comment" id="comment" class="commentInput"></textarea>
+                    </div>    
+                </div>  
             </div>
+            <button class="btn btn-save" onclick="insertComment()">ส่งข้อมูล</button>
         </div>
     </div>
 </body>
