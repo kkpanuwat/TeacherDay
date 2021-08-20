@@ -2,6 +2,7 @@
 
 :root {
     --color-black: #888;
+    --color-shadow: #888;
 }
 
 * {
@@ -24,9 +25,20 @@
 .form-control {
     background-color: white;
     border-radius: 10px;
-    width: 100%;
+    width: 80%;
     height: 300px;
-    box-shadow: 0 2px 5px #000;
+    box-shadow: 0 2px 5px var(--color-shadow);
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.inputText {
+    width: 80%;
+    border-radius: 10px;
+    height: 50px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--color-black);
 }
 
 /* .form-left {
