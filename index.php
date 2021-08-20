@@ -14,7 +14,9 @@
         <div class="form-control">
             <form action="" method="post">
                 <div class="form">
-                    <div class="form-left"></div>
+                    <div class="form-left">
+                        <label for="fname">FirstName : </label>
+                    </div>
                     <div class="form-right"></div>
                 </div>
             </form>
