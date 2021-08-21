@@ -18,7 +18,7 @@
     </svg>
 
     <div class="container">
-        <h1 class="svg-text">พิธีไหว้ครูออนไลน์ค่ะ</h1>
+        <h1 class="svg-text">พิธีไหว้ครูออนไลน์</h1>
         <div class="form-control">
             <div class="form">
                 <div class="form-left">
@@ -36,7 +36,7 @@
                         <div class="major">
                             <label for="majorName">หลักสูตร : </label>
                             <br>
-                            <select name="inputmajor" id="inputmajor">
+                            <select name="inputmajor" id="inputmajor" class="major inputText">
                                 <option value="">วิทยาการคอมพิวเตอร์ (CS)</option>
                                 <option value="">เทคโนโลยีสารสนเทศ (IT)</option>
                                 <option value="">ภูมิสารสนเทศศาสตร์ (GIS)</option>
@@ -56,13 +56,13 @@
                 <div class="form-right">
                     <label for="teacherName">ถึง : </label>
                     <br>
-                    <select name="teacher" id="teacher">
+                    <select name="teacher" id="teacher" class="tea inputText">
                         <option value="">ผู้ช่วยศาสตราจารย์ สุมณฑา เกษมวิลาศ</option>
                     </select>
                     <div class="comment">
                         <label for="commentName">คำอวยพร :</label>
                         <br>
-                        <textarea name="comment" id="comment" class="commentInput-teacher"></textarea>
+                        <textarea name="comment" id="comment" class="commentInput teacher"></textarea>
                     </div>
                 </div>
             </div>
