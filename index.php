@@ -68,6 +68,16 @@
 
             <button class="btn btn-save" onclick="insertComment()">ส่งคำอวยพร</button>
         </div>
+<hr>
+        <div class="show-control">
+            <div class="show-item">
+                <h2>จำนวนผู้ส่งคำอวยพรทั้งหมด <h2 class="people">&nbsp; 500 คน</h2> </h2>
+            </div>
+            <h3>ผู้ร่วมอวยพรใหม่</h3>
+            <div class="show-item2">
+                <h2>จำนวนผู้ส่งคำอวยพรทั้งหมด <h2 class="people">&nbsp; 500 คน</h2> </h2>
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
