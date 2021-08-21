@@ -140,6 +140,10 @@
     letter-spacing: 2px;
 } 
 
+.commentInput-teacher {
+    width: 100%;
+}
+
 
 
 @media screen and (max-width: 769px) {
