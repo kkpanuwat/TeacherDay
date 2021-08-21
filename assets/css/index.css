@@ -48,7 +48,7 @@
     background-color: white;
     border-radius: 8px 8px;
     width: 80%;
-    height: 370px;
+    height: 500px;
     box-shadow: 0 4px 8px var(--color-shadow);
     padding: 20px;
     margin: 0 auto;
@@ -121,6 +121,21 @@
     border-radius: 10px;
     border: 1px solid rgb(207, 207, 207);
     box-sizing: border-box;
+}
+
+.img-pan {
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.click {
+    padding: 5px;
+    border: 2px solid green;
+}
+
+.img-pan:hover {
+    padding: 5px;
+    border: 2px solid green;
 }
 
 .btn {
@@ -196,6 +211,17 @@
     place-content: center;
     margin-bottom: 1em;
     margin-top: 2em;
+}
+
+.form-pan {
+    width: 40%;
+    height: 60px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    place-items: center;
+    place-content: center;
 }
 @media screen and (max-width: 1200px) {
     .show-item {
