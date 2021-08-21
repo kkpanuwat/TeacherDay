@@ -69,9 +69,9 @@
             </div>
             <label style="text-align: center; display:block; margin:20px" for="commentName">เลือกพานดอกไม้</label>
             <div class="form-pan">
-                <img class="img-pan click" width="70" src="https://i.pinimg.com/564x/75/d3/d0/75d3d05bf91d63a04bde1d9f35f1dec2.jpg" alt="">
-                <img class="img-pan" width="70" src="https://i.pinimg.com/564x/46/7f/9f/467f9f9700990e3cea28af3b70e28f1a.jpg" alt="">
-                <img class="img-pan" width="70" src="https://i.pinimg.com/564x/75/d3/d0/75d3d05bf91d63a04bde1d9f35f1dec2.jpg" alt="">
+                <img class="img-pan" id="pan1" onclick="clickpan('pan1')" width="70" src="https://i.pinimg.com/564x/75/d3/d0/75d3d05bf91d63a04bde1d9f35f1dec2.jpg" alt="">
+                <img class="img-pan" id="pan2" onclick="clickpan('pan2')" width="70" src="https://i.pinimg.com/564x/46/7f/9f/467f9f9700990e3cea28af3b70e28f1a.jpg" alt="">
+                <img class="img-pan" id="pan3" onclick="clickpan('pan3')" width="70" src="https://i.pinimg.com/564x/75/d3/d0/75d3d05bf91d63a04bde1d9f35f1dec2.jpg" alt="">
             </div>
             <button class="btn btn-save" onclick="insertComment()">ส่งคำอวยพร</button>
         </div>

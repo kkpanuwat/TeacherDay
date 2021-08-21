@@ -134,3 +134,21 @@ function getAllComment() {
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send();
 }
+
+function clickpan(args){
+  let id  = args
+  let pan = document.getElementById(id)
+  pan.className = 'img-pan click'
+  if(id == 'pan1'){
+    document.getElementById('pan2').className = 'img-pan'
+    document.getElementById('pan3').className = 'img-pan'
+  }
+  else if(id == 'pan2'){
+    document.getElementById('pan1').className = 'img-pan'
+    document.getElementById('pan3').className = 'img-pan'
+  }
+  else if(id == 'pan3'){
+    document.getElementById('pan1').className = 'img-pan'
+    document.getElementById('pan2').className = 'img-pan'
+  }
+}
