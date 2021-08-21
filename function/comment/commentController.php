@@ -21,3 +21,11 @@ if(isset($_GET['getNumRow'])){
     $result = mysqli_query($conn,$sql);
     echo " ".mysqli_num_rows($result)." คน";
 }
+
+if(isset($_GET['allComment'])){
+    $sql = "SELECT * FROM comment ORDER BY comment_id DESC LIMIT 5";
+    $result = mysqli_query($conn,$sql);
+    while($row = mysqli_fetch_array($result)){
+        echo '<div class="show-item2"><h3>'.$row['name'].'</h3> <h3>ได้ร่วมอวยพรแล้ว</h3> <img width="50" src="https://i.pinimg.com/564x/16/32/42/163242221a327f3864234a62f30bd985.jpg" alt="pan"></div>';
+    }
+}
