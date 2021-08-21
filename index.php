@@ -36,7 +36,7 @@
                         <div class="major">
                             <label for="majorName">หลักสูตร : </label>
                             <br>
-                            <select name="inputmajor" id="inputmajor" onchange="getTeacher()">
+                            <select name="inputmajor" id="inputmajor" onchange="getTeacher()" class="major inputText">
                                 <option value="1">วิทยาการคอมพิวเตอร์ (CS)</option>
                                 <option value="2">เทคโนโลยีสารสนเทศ (IT)</option>
                                 <option value="3">ภูมิสารสนเทศศาสตร์ (GIS)</option>
@@ -56,12 +56,12 @@
                 <div class="form-right">
                     <label for="teacherName">ถึง : </label>
                     <br>
-                    <select name="teacher" id="teacher">
+                    <select name="teacher" id="teacher" class="tea inputText">
                     </select>
                     <div class="comment">
                         <label for="commentName">คำอวยพร :</label>
                         <br>
-                        <textarea name="comment" id="comment" class="commentInput-teacher"></textarea>
+                        <textarea name="comment" id="comment" class="commentInput teacher"></textarea>
                     </div>
                 </div>
             </div>
