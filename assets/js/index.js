@@ -1,3 +1,5 @@
+let numrow = 0;
+
 if (window.XMLHttpRequest) {
   xmlhttp = new XMLHttpRequest();
 } else {
@@ -6,7 +8,6 @@ if (window.XMLHttpRequest) {
 
 function setSystem() {
   getTeacher();
-  setInterval(getNumRows, 1000);
   setInterval(getAllComment, 1000);
 }
 
@@ -19,7 +20,7 @@ function insertComment() {
   let teacher = document.getElementById("teacher").value;
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      console.log(xmlhttp.responseText);
+      alert("insert success");
     }
   };
 
@@ -110,24 +111,22 @@ function getTeacher() {
   });
 }
 
-function getNumRows() {
-  xmlhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("numrows").innerHTML = xmlhttp.responseText;
-      // console.log(xmlhttp.responseText);
-    }
-  };
-  let url = "./function/comment/commentController.php?getNumRow";
-  xmlhttp.open("GET", url, true);
-  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xmlhttp.send();
-}
-
 function getAllComment() {
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("result").innerHTML = xmlhttp.responseText;
-      // console.log(xmlhttp.responseText);
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("numrows").innerHTML = xmlhttp.responseText;
+        }
+      };
+      let url = "./function/comment/commentController.php?getNumRow";
+      xmlhttp.open("GET", url, true);
+      xmlhttp.setRequestHeader(
+        "Content-type",
+        "application/x-www-form-urlencoded"
+      );
+      xmlhttp.send();
     }
   };
   let url = "./function/comment/commentController.php?allComment";
