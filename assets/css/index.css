@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
 :root {
     --color-black: #888;
     --color-shadow: rgb(194, 194, 194);
     --color-green: #28c76f;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -10,6 +15,7 @@
     margin: 0;
     font-family: 'Prompt', sans-serif;
 }
+
 .svg-text {
     font-size: 4em;
     margin-top: -2em;
@@ -19,14 +25,20 @@
     margin-bottom: 10px;
     position: relative;
     animation-name: form;
-    animation-duration: 1.5s;  
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
 @keyframes form {
-    from {right: -160%;}
-    to {right: 0.5%;}
-  }
+    from {
+        right: -160%;
+    }
+
+    to {
+        right: 0.5%;
+    }
+}
+
 .container {
     width: 80vw;
     margin: 0 auto;
@@ -56,14 +68,19 @@
     border-top: 8px solid #478fbe;
     position: relative;
     animation-name: svg;
-    animation-duration: 1.5s;  
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
 @keyframes svg {
-    from {left: -160%;}
-    to {left: 1%;}
-  }
+    from {
+        left: -160%;
+    }
+
+    to {
+        left: 1%;
+    }
+}
 
 .inputText {
     width: 90%;
@@ -157,11 +174,12 @@
     cursor: pointer;
     transition: .2s;
 }
+
 .btn-save:hover {
     background-color: rgb(31, 150, 98);
     box-shadow: 0 2px 10px var(--color-shadow);
     letter-spacing: 2px;
-} 
+}
 
 .commentInput-teacher {
     width: 100%;
@@ -185,13 +203,15 @@
     font-size: 2em;
     letter-spacing: 2px;
     color: white;
-    
+
 }
+
 .show-item h2.people {
     font-size: 3em;
     color: white;
 }
-.show-item + h3 {
+
+.show-item+h3 {
     letter-spacing: 2px;
     color: rgb(88, 86, 86);
     text-align: center;
@@ -223,23 +243,25 @@
     place-items: center;
     place-content: center;
 }
+
 @media screen and (max-width: 1200px) {
     .show-item {
         width: 70%;
         height: 4.5em;
     }
-    
+
     .show-item h2 {
         font-size: 1.3em;
         letter-spacing: 2px;
         color: white;
-        
+
     }
+
     .show-item h2.people {
         font-size: 2.5em;
         color: rgb(240, 221, 49);
     }
-  }
+}
 
 
 @media screen and (max-width: 870px) {
@@ -247,12 +269,14 @@
         font-size: 3em;
         margin-top: -1em;
     }
+
     .form {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
         width: 100%;
     }
+
     .major-grade {
         width: 100%;
         margin-top: 10px;
@@ -264,75 +288,84 @@
     .form-right {
         margin-top: 0px;
     }
+
     .grade {
         margin-left: 0px;
     }
+
     .form-control {
         height: 800px;
         width: 90%;
     }
+
     .inputText {
         width: 100%;
     }
+
     .show-item {
         width: 90%;
         height: 4.5em;
     }
-    
+
     .show-item h2 {
         font-size: 1.3em;
         letter-spacing: 2px;
         color: white;
-        
+
     }
+
     .show-item h2.people {
         font-size: 2.5em;
         color: rgb(240, 221, 49);
     }
-  }
+}
 
-  @media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {
     .svg-text {
         font-size: 1.5em;
         margin-top: -1em;
-        
+
     }
+
     .show-item {
         width: 100%;
         height: 4.5em;
     }
-    
+
     .show-item h2 {
         font-size: 0.8em;
         letter-spacing: 2px;
         color: white;
-        
+
     }
+
     .show-item h2.people {
         font-size: 1.2em;
         color: rgb(240, 221, 49);
     }
-  }
+}
 
-  @media screen and (max-width: 365px) {
+@media screen and (max-width: 365px) {
     .svg-text {
         font-size: 1.5em;
         margin-top: -1em;
-        
+
     }
+
     .show-item {
         width: 100%;
         height: 4.5em;
     }
-    
+
     .show-item h2 {
         font-size: 0.6em;
         letter-spacing: 2px;
         color: white;
-        
+
     }
+
     .show-item h2.people {
         font-size: 1em;
         color: rgb(240, 221, 49);
     }
-  }
+}

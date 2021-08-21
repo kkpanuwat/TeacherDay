@@ -7,7 +7,8 @@ if (isset($_POST['insertComment'])) {
     $grade = $_POST['grade'];
     $comment = $_POST['comment'];
     $teacher = $_POST['teacher_id'];
-    $sql = "INSERT INTO comment (std_id,name,grade,major,comment,tray,teacher_id) VALUES('$stdId','$name',$grade,'$major','$comment',1,$teacher)";
+    $tray = $_POST['tray'];
+    $sql = "INSERT INTO comment (std_id,name,grade,major,comment,tray,teacher_id) VALUES('$stdId','$name',$grade,'$major','$comment',$tray,$teacher)";
     $result = mysqli_query($conn,$sql);
     if($result){
         echo 'success';
