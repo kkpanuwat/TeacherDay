@@ -4,13 +4,18 @@ if (window.XMLHttpRequest) {
   xmlhttp = new ActiveXOject("Microsoft.XMLHTTP");
 }
 
+function setSystem() {
+  getTeacher();
+  setInterval(getNumRows, 1000);
+}
+
 function insertComment() {
   let std_id = document.getElementById("stdId").value;
   let name = document.getElementById("name").value;
   let major = document.getElementById("inputmajor").value;
   let grade = document.getElementById("grade").value;
   let comment = document.getElementById("comment").value;
-  let teacher = document.getElementById('teacher').value;
+  let teacher = document.getElementById("teacher").value;
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       console.log(xmlhttp.responseText);
@@ -28,7 +33,7 @@ function insertComment() {
     "&grade=" +
     grade +
     "&comment=" +
-    comment+
+    comment +
     "&teacher_id=" +
     teacher;
   xmlhttp.open("POST", url, true);
@@ -79,28 +84,40 @@ function getTeacher() {
   let teacherId = document.getElementById("inputmajor").value;
   let teacher = Array();
   if (teacherId == 1) {
-    index = 2
+    index = 2;
     teacher = teacher_cs;
   } else if (teacherId == 2) {
-    index = 15
+    index = 15;
     teacher = teacher_it;
-  }
-  else {
-    index = 27
-    teacher = teacher_gis
+  } else {
+    index = 27;
+    teacher = teacher_gis;
   }
   let teacherObject = document.getElementById("teacher");
   teacherObject.innerHTML = null;
-  let all_teacher = document.createElement('option')
-  all_teacher.value = 1
-  all_teacher.innerHTML = "อาจารย์ทุกท่าน"
-  teacherObject.appendChild(all_teacher)
+  let all_teacher = document.createElement("option");
+  all_teacher.value = 1;
+  all_teacher.innerHTML = "อาจารย์ทุกท่าน";
+  teacherObject.appendChild(all_teacher);
   teacher.forEach((element) => {
     let teacer_item = document.createElement("option");
     teacer_item.value = index;
     teacer_item.innerHTML = element;
     teacherObject.appendChild(teacer_item);
-    console.log(index, element);
+    // console.log(index, element);
     index++;
   });
+}
+
+function getNumRows() {
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById('numrows').innerHTML = xmlhttp.responseText
+      // console.log(xmlhttp.responseText);
+    }
+  };
+  let url = "./function/comment/commentController.php?getNumRow";
+  xmlhttp.open("GET", url, true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send();
 }

@@ -15,3 +15,9 @@ if (isset($_POST['insertComment'])) {
         echo 'fail';
     }
 }
+
+if(isset($_GET['getNumRow'])){
+    $sql = "SELECT * FROM comment";
+    $result = mysqli_query($conn,$sql);
+    echo mysqli_num_rows($result);
+}
