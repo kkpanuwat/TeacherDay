@@ -1,44 +1,7 @@
-if (window.XMLHttpRequest) {
-  xmlhttp = new XMLHttpRequest();
-} else {
-  xmlhttp = new ActiveXOject("Microsoft.XMLHTTP");
-}
-
-function insertComment() {
-  let std_id = document.getElementById("stdId").value;
-  let name = document.getElementById("name").value;
-  let major = document.getElementById("inputmajor").value;
-  let grade = document.getElementById("grade").value;
-  let comment = document.getElementById("comment").value;
-  let teacher = document.getElementById('teacher').value;
-  xmlhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      console.log(xmlhttp.responseText);
-    }
-  };
-
-  let url = "./function/comment/commentController.php";
-  let data =
-    "insertComment&std_id=" +
-    std_id +
-    "&name=" +
-    name +
-    "&major=" +
-    major +
-    "&grade=" +
-    grade +
-    "&comment=" +
-    comment+
-    "&teacher_id=" +
-    teacher;
-  xmlhttp.open("POST", url, true);
-  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xmlhttp.send(data);
-}
-
-function getTeacher() {
-  let index = 1;
-  let teacher_cs = [
+<?php
+include './connectDatabase/connectDB.php';
+$teacher = [
+    "อาจารย์ทุกท่าน",
     "รศ.ดร.ศาสตรา   วงศ์ธนวสุ",
     "รศ.ดร.สิรภัทร   เชี่ยวชาญวัฒนา",
     "รศ.ดร.ปัญญาพล   หอระตะ",
@@ -52,8 +15,6 @@ function getTeacher() {
     "อาจารย์ วชิราวุธ   ธรรมวิเศษ",
     "อาจารย์ ธนพล   ตั้งชูพงศ์",
     "อาจารย์ ไพรสันต์   ผดุงเวียง",
-  ];
-  let teacher_it = [
     "รศ.ดร.สมจิตร   อาจอินทร์",
     "รศ.ดร.งามนิจ   อาจอินทร์",
     "รศ.ดร.จักรชัย   โสอินทร์",
@@ -66,8 +27,6 @@ function getTeacher() {
     "อาจารย์ วรัญญา   วรรณศรี",
     "อาจารย์ เพชร    อิ่มทองคำ",
     "อาจารย์ ชานนท์   เดชสุภา",
-  ];
-  let teacher_gis = [
     "รองศาสตราจารย์   ชัยพล   กีรติกสิกร",
     "ผู้ช่วยศาสตราจารย์   รัศมี   สุวรรณวีระกำธร",
     "ผู้ช่วยศาสตราจารย์   พิพัธน์   เรืองแสง",
@@ -75,32 +34,9 @@ function getTeacher() {
     "ผู้ช่วยศาสตราจารย์   ณกร   วัฒนกิจ",
     "อาจารย์   ศรัณย์   อภิชนตระกูล",
     "อาจารย์   ศักดิ์พจน์   ทองเลี่ยมนาค",
-  ];
-  let teacherId = document.getElementById("inputmajor").value;
-  let teacher = Array();
-  if (teacherId == 1) {
-    index = 2
-    teacher = teacher_cs;
-  } else if (teacherId == 2) {
-    index = 15
-    teacher = teacher_it;
-  }
-  else {
-    index = 27
-    teacher = teacher_gis
-  }
-  let teacherObject = document.getElementById("teacher");
-  teacherObject.innerHTML = null;
-  let all_teacher = document.createElement('option')
-  all_teacher.value = 1
-  all_teacher.innerHTML = "อาจารย์ทุกท่าน"
-  teacherObject.appendChild(all_teacher)
-  teacher.forEach((element) => {
-    let teacer_item = document.createElement("option");
-    teacer_item.value = index;
-    teacer_item.innerHTML = element;
-    teacherObject.appendChild(teacer_item);
-    console.log(index, element);
-    index++;
-  });
+];
+
+foreach ($teacher as &$value) {
+    $sql = "INSERT INTO teacher(teacher_name) VALUES ('$value')";
+    mysqli_query($conn,$sql);
 }
