@@ -75,7 +75,7 @@
             </div>
             <h3>ผู้ร่วมอวยพรใหม่</h3>
             <div class="show-item2">
-                <h2>จำนวนผู้ส่งคำอวยพรทั้งหมด <h2 class="people">&nbsp; 500 คน</h2> </h2>
+                <h3>ธนัชชา เตียนพลกรัง</h3> <h3>ได้ร่วมอวยพรแล้ว</h3> <img width="50" src="https://i.pinimg.com/564x/16/32/42/163242221a327f3864234a62f30bd985.jpg" alt="pan">
             </div>
         </div>
     </div>

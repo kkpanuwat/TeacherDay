@@ -177,7 +177,6 @@
     color: white;
 }
 .show-item + h3 {
-    font-size: 2em;
     letter-spacing: 2px;
     color: rgb(88, 86, 86);
     text-align: center;
@@ -186,13 +185,16 @@
 .show-item2 {
     width: 70%;
     height: 5em;
-    background-color: #ce6868;
-    margin: auto;
+    background-color: #ffffff;
+    border: 2px solid rgb(204, 194, 60);
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    place-items: center;
+    place-content: center;
     margin-bottom: 1em;
-    align-items: center;
     margin-top: 2em;
 }
 @media screen and (max-width: 1200px) {
