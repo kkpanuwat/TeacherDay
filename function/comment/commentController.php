@@ -19,5 +19,5 @@ if (isset($_POST['insertComment'])) {
 if(isset($_GET['getNumRow'])){
     $sql = "SELECT * FROM comment";
     $result = mysqli_query($conn,$sql);
-    echo mysqli_num_rows($result);
+    echo " ".mysqli_num_rows($result)." คน";
 }
