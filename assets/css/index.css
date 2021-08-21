@@ -153,8 +153,68 @@
 }
 
 
+.show-item {
+    width: 70%;
+    height: 5em;
+    background-color: #233E8B;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    align-items: center;
+    margin-top: 2em;
+}
 
-@media screen and (max-width: 769px) {
+.show-item h2 {
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: white;
+    
+}
+.show-item h2.people {
+    font-size: 3em;
+    color: white;
+}
+.show-item + h3 {
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: rgb(88, 86, 86);
+    text-align: center;
+}
+
+.show-item2 {
+    width: 70%;
+    height: 5em;
+    background-color: #ce6868;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    align-items: center;
+    margin-top: 2em;
+}
+@media screen and (max-width: 1200px) {
+    .show-item {
+        width: 70%;
+        height: 4.5em;
+    }
+    
+    .show-item h2 {
+        font-size: 1.3em;
+        letter-spacing: 2px;
+        color: white;
+        
+    }
+    .show-item h2.people {
+        font-size: 2.5em;
+        color: rgb(240, 221, 49);
+    }
+  }
+
+
+@media screen and (max-width: 870px) {
     .svg-text {
         font-size: 3em;
         margin-top: -1em;
@@ -186,12 +246,65 @@
     .inputText {
         width: 100%;
     }
+    .show-item {
+        width: 90%;
+        height: 4.5em;
+    }
+    
+    .show-item h2 {
+        font-size: 1.3em;
+        letter-spacing: 2px;
+        color: white;
+        
+    }
+    .show-item h2.people {
+        font-size: 2.5em;
+        color: rgb(240, 221, 49);
+    }
   }
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 450px) {
     .svg-text {
         font-size: 1.5em;
         margin-top: -1em;
         
+    }
+    .show-item {
+        width: 100%;
+        height: 4.5em;
+    }
+    
+    .show-item h2 {
+        font-size: 0.8em;
+        letter-spacing: 2px;
+        color: white;
+        
+    }
+    .show-item h2.people {
+        font-size: 1.2em;
+        color: rgb(240, 221, 49);
+    }
+  }
+
+  @media screen and (max-width: 365px) {
+    .svg-text {
+        font-size: 1.5em;
+        margin-top: -1em;
+        
+    }
+    .show-item {
+        width: 100%;
+        height: 4.5em;
+    }
+    
+    .show-item h2 {
+        font-size: 0.6em;
+        letter-spacing: 2px;
+        color: white;
+        
+    }
+    .show-item h2.people {
+        font-size: 1em;
+        color: rgb(240, 221, 49);
     }
   }
