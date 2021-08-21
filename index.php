@@ -36,26 +36,19 @@
                         <div class="major">
                             <label for="majorName">หลักสูตร : </label>
                             <br>
-                            <input value="วิทยาการคอมพิวเตอร์ (CS)" id="inputmajor" list="major" class="major inputText">
-                            <datalist id="major">
-                                <option value="วิทยาการคอมพิวเตอร์ (CS)">
-                                <option value="เทคโนโลยีสารสนเทศ (IT)">
-                                <option value="ภูมิสารสนเทศศาสตร์ (GIS)">
-                            </datalist>
+                            <select name="inputmajor" id="inputmajor">
+                                <option value="">วิทยาการคอมพิวเตอร์ (CS)</option>
+                                <option value="">เทคโนโลยีสารสนเทศ (IT)</option>
+                                <option value="">ภูมิสารสนเทศศาสตร์ (GIS)</option>
+                            </select>
                         </div>
                         <div class="grade">
                             <label for="gradeName">ระดับการศึกษา : </label>
                             <br>
                             <select name="grade" id="grade" class="grade inputText">
-                                <optgroup label="นักศึกษา">
-                                    <option value="1">ระดับชั้นปริญญาตรี</option>
-                                    <option value="2">ระดับชั้นปริญญาโท</option>
-                                    <option value="3">ระดับชั้นปริญญาเอก</option>
-                                </optgroup>
-                                <optgroup label="บุคลากร">
-                                    <option value="4">อาจารย์</option>
-                                    <option value="5">บุคลากร</option>
-                                </optgroup>
+                                <option value="1">ระดับชั้นปริญญาตรี</option>
+                                <option value="2">ระดับชั้นปริญญาโท</option>
+                                <option value="3">ระดับชั้นปริญญาเอก</option>
                             </select>
                         </div>
                     </div>
