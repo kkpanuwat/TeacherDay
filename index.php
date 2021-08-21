@@ -14,10 +14,10 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#F4D160" fill-opacity="1" d="M0,192L40,192C80,192,160,192,240,202.7C320,213,400,235,480,208C560,181,640,107,720,101.3C800,96,880,160,960,176C1040,192,1120,160,1200,138.7C1280,117,1360,107,1400,101.3L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
         <image href="http://cad.kku.ac.th/wp-content/uploads/2018/05/Th_color.png" width="50" x="95%" y="15"/>
-        <text class="svg-text" x="50%" y="290" text-anchor="middle">พิธีไหว้ครูออนไลน์</text>
     </svg>
 
     <div class="container">
+        <h1 class="svg-text">พิธีไหว้ครูออนไลน์</h1>
         <div class="form-control">
             <div class="form">
                 <div class="form-left">
