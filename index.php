@@ -67,7 +67,8 @@
                     </div>    
                 </div>  
             </div>
-            <button class="btn btn-save" onclick="insertComment()">ส่งข้อมูล</button>
+
+            <button class="btn btn-save" onclick="insertComment()">ส่งคำอวยพร</button>
         </div>
     </div>
 </body>
