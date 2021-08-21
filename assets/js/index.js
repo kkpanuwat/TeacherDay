@@ -96,4 +96,5 @@ function getTeacher() {
     console.log(index, element);
     index++;
   });
+  // ddddd
 }
