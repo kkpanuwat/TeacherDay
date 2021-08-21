@@ -7,6 +7,7 @@ if (window.XMLHttpRequest) {
 function setSystem() {
   getTeacher();
   setInterval(getNumRows, 1000);
+  setInterval(getAllComment, 1000);
 }
 
 function insertComment() {
@@ -112,11 +113,24 @@ function getTeacher() {
 function getNumRows() {
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById('numrows').innerHTML = xmlhttp.responseText
+      document.getElementById("numrows").innerHTML = xmlhttp.responseText;
       // console.log(xmlhttp.responseText);
     }
   };
   let url = "./function/comment/commentController.php?getNumRow";
+  xmlhttp.open("GET", url, true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send();
+}
+
+function getAllComment() {
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("result").innerHTML = xmlhttp.responseText;
+      // console.log(xmlhttp.responseText);
+    }
+  };
+  let url = "./function/comment/commentController.php?allComment";
   xmlhttp.open("GET", url, true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send();
