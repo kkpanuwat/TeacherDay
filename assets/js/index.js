@@ -34,8 +34,8 @@ function insertComment() {
 }
 
 function getTeacher() {
+  let index = 1;
   let teacher_cs = [
-    "อาจารย์ทุกท่าน",
     "รศ.ดร.ศาสตรา   วงศ์ธนวสุ",
     "รศ.ดร.สิรภัทร   เชี่ยวชาญวัฒนา",
     "รศ.ดร.ปัญญาพล   หอระตะ",
@@ -51,7 +51,6 @@ function getTeacher() {
     "อาจารย์ ไพรสันต์   ผดุงเวียง",
   ];
   let teacher_it = [
-    "อาจารย์ทุกท่าน",
     "รศ.ดร.สมจิตร   อาจอินทร์",
     "รศ.ดร.งามนิจ   อาจอินทร์",
     "รศ.ดร.จักรชัย   โสอินทร์",
@@ -66,7 +65,6 @@ function getTeacher() {
     "อาจารย์ ชานนท์   เดชสุภา",
   ];
   let teacher_gis = [
-    "อาจารย์ทุกท่าน",
     "รองศาสตราจารย์   ชัยพล   กีรติกสิกร",
     "ผู้ช่วยศาสตราจารย์   รัศมี   สุวรรณวีระกำธร",
     "ผู้ช่วยศาสตราจารย์   พิพัธน์   เรืองแสง",
@@ -78,16 +76,22 @@ function getTeacher() {
   let teacherId = document.getElementById("inputmajor").value;
   let teacher = Array();
   if (teacherId == 1) {
+    index = 2
     teacher = teacher_cs;
   } else if (teacherId == 2) {
+    index = 15
     teacher = teacher_it;
   }
   else {
+    index = 27
     teacher = teacher_gis
   }
   let teacherObject = document.getElementById("teacher");
   teacherObject.innerHTML = null;
-  let index = 1;
+  let all_teacher = document.createElement('option')
+  all_teacher.value = 1
+  all_teacher.innerHTML = "อาจารย์ทุกท่าน"
+  teacherObject.appendChild(all_teacher)
   teacher.forEach((element) => {
     let teacer_item = document.createElement("option");
     teacer_item.value = index;
@@ -96,5 +100,4 @@ function getTeacher() {
     console.log(index, element);
     index++;
   });
-  // ddddd
 }
