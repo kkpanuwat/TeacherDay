@@ -1,4 +1,5 @@
 let numrow = 0;
+let tray = 1
 
 if (window.XMLHttpRequest) {
   xmlhttp = new XMLHttpRequest();
@@ -20,7 +21,12 @@ function insertComment() {
   let teacher = document.getElementById("teacher").value;
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      alert("insert success");
+      document.getElementById("stdId").value = ''
+      document.getElementById("name").value = ''
+      document.getElementById("inputmajor").value = 1
+      document.getElementById("comment").value = ''
+      document.getElementById("teacher").value = 0
+      location.href = '#result'
     }
   };
 
@@ -36,6 +42,8 @@ function insertComment() {
     grade +
     "&comment=" +
     comment +
+    "&tray=" +
+    tray +
     "&teacher_id=" +
     teacher;
   xmlhttp.open("POST", url, true);
@@ -140,14 +148,17 @@ function clickpan(args){
   let pan = document.getElementById(id)
   pan.className = 'img-pan click'
   if(id == 'pan1'){
+    tray = 1
     document.getElementById('pan2').className = 'img-pan'
     document.getElementById('pan3').className = 'img-pan'
   }
   else if(id == 'pan2'){
+    tray = 2
     document.getElementById('pan1').className = 'img-pan'
     document.getElementById('pan3').className = 'img-pan'
   }
   else if(id == 'pan3'){
+    tray = 3
     document.getElementById('pan1').className = 'img-pan'
     document.getElementById('pan2').className = 'img-pan'
   }
