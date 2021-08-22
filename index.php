@@ -70,7 +70,7 @@
             </div>
             <label style="text-align: center; display:block; margin:20px" for="commentName">เลือกพานดอกไม้</label>
             <div class="form-pan">
-                <img class="img-pan" id="pan1" onclick="clickpan('pan1')" src="assets/imgs/pan01.png" alt="">
+                <img class="img-pan click" id="pan1" onclick="clickpan('pan1')" src="assets/imgs/pan01.png" alt="">
                 <img class="img-pan" id="pan2" onclick="clickpan('pan2')" src="assets/imgs/pan02.png" alt="">
                 <img class="img-pan" id="pan3" onclick="clickpan('pan3')" src="assets/imgs/pan03.png" alt="">
             </div>
@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#233E8B" fill-opacity="1" d="M0,160L80,160C160,160,320,160,480,176C640,192,800,224,960,229.3C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320"><path fill="#233E8B" fill-opacity="1" d="M0,160L80,160C160,160,320,160,480,176C640,192,800,224,960,229.3C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
     <text x="35%" y="90%" class="svg-text2">&copy; 2021 สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น</text>
 </svg>
 </body>

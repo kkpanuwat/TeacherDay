@@ -18,6 +18,11 @@ html {
 .container {
     width: 80vw;
     margin: 0 auto;
+    margin-top: -5em;
+}
+.svg-text2 {
+  font-size: 13px;
+  fill: rgb(247, 247, 247);
 }
 
 .form-control {
@@ -25,6 +30,20 @@ html {
     margin: 0 auto;
    
 }
+
+#searchBlog {
+  display: flex;
+  justify-content: center;
+}
+
+select {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0px 4px 8px rgb(190, 190, 190);
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
