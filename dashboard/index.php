@@ -14,45 +14,14 @@
 
 <body onload="getAllComment()">
     <div class="container">
-        <div class="search">
-            <input type="text" id="searchInput">
-            <button>Search</button>
+        <div class="search" id="searchBlog">
+            <select name="selecttype" onchange="selectType(this.value)">
+                <option value="1">ค้นหาทั้งหมด</option>
+                <option value="2">ค้นหาจากสาขาวิชา</option>
+                <option value="3">ค้นหาจากรายชื่ออาจารย์</option>
+            </select>
         </div>
-
-        <!-- <div class="table-result">
-            <div id="result"></div>
-        </div> -->
-
-        <div class="form-control">
-            <table>
-                <tr>
-                    <th>ลำดับ</th>
-                    <th>ชื่อผู้ส่ง</th>
-                    <th>ข้อความ</th>
-                    <th>วันที่ส่ง</th>
-                    <th>ชื่อผู้รับ</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Narattha</td>
-                    <td>สุขสันต์วันเกิดนะค้า</td>
-                    <td>22-8-2564</td>
-                    <td>Sumonta</td>
-                    <td><button class="btn-trash"><i class="fa fa-trash"></i></button></td>
-                </tr>
-            </table>
-            <div class="pager">
-                <ul>
-                    <li>Page <input class="input-page" type="text"> of 500</li>
-                    <li>
-                        <button class="button">Previous</button>
-                    </li>
-                    <li>
-                        <button class="button">Next</button>
-                    </li>
-                </ul>
-            </div>
+        <div class="form-control" id="result">
         </div>
 
     </div>
