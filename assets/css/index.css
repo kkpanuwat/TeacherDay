@@ -226,7 +226,7 @@ html {
     height: 5em;
     background-color: #f3f1f1;
     box-shadow: 0 4px 8px var(--color-shadow);
-    border-top: 8px solid rgb(253, 246, 148);
+    border-top: 8px solid rgb(192, 112, 91);
     border-radius: 8px;
     margin: auto;
     display: grid;
