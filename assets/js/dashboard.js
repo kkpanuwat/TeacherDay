@@ -26,9 +26,26 @@ function changePage(args) {
   };
   let url =
     "../function/comment/commentController.php?allCommentDashboard&pagenumber=" +
-    (page);
+    page;
   let data = "pagenumber=" + page;
   xmlhttp.open("GET", url, true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send();
+}
+
+function deleteComment(commentID) {
+  if (!confirm("คุณต้องการลบคำอวยพรใช่หรือไม่ ? ")) {
+    return;
+  }
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      getAllComment();
+    }
+  };
+  let url =
+    "../function/comment/commentController.php?allCommentDashboard&deleteComment";
+  let data = "deleteComment&comment_id=" + commentID;
+  xmlhttp.open("POST", url, true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send(data);
 }

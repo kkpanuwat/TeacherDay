@@ -17,11 +17,6 @@
             <input type="text" id="searchInput">
             <button>Search</button>
         </div>
-
-        <!-- <div class="table-result">
-            <div id="result"></div>
-        </div> -->
-
         <div class="form-control" id="result">
         </div>
 

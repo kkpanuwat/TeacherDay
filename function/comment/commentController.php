@@ -62,7 +62,7 @@ if (isset($_GET['allCommentDashboard'])) {
             <td>' . $row['comment'] . '</td>
             <td>' . $row['time_stamp'] . '</td>
             <td>' . $row['teacher_name'] . '</td>
-            <td><button class="btn-trash"><i class="fa fa-trash"></i></button></td>
+            <td><button class="btn-trash" onclick="deleteComment('.$row['comment_id'].')"><i class="fa fa-trash"></i></button></td>
         </tr>';
         }
         $num++;
@@ -85,4 +85,11 @@ if (isset($_GET['allCommentDashboard'])) {
             </li>
         </ul>
     </div>';
+}
+
+
+if(isset($_POST['deleteComment'])){
+    $commentID = $_POST['comment_id'];
+    $sql = "DELETE FROM comment WHERE comment_id = $commentID";
+    mysqli_query($conn,$sql);
 }
