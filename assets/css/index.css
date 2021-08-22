@@ -224,7 +224,7 @@ html {
 .show-item2 {
     width: 70%;
     height: 5em;
-    background-color: #f3f1f1;
+    background-color: whitesmoke;
     box-shadow: 0 4px 8px var(--color-shadow);
     border-top: 8px solid #a73b25;
     border-radius: 8px;
