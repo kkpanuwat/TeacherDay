@@ -13,9 +13,12 @@
 
 <body onload="getAllComment()">
     <div class="container">
-        <div class="search">
-            <input type="text" id="searchInput">
-            <button>Search</button>
+        <div class="search" id="searchBlog">
+            <select name="selecttype" onchange="selectType(this.value)">
+                <option value="1">ค้นหาทั้งหมด</option>
+                <option value="2">ค้นหาจากสาขาวิชา</option>
+                <option value="3">ค้นหาจากรายชื่ออาจารย์</option>
+            </select>
         </div>
         <div class="form-control" id="result">
         </div>
