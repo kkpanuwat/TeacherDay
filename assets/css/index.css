@@ -144,15 +144,18 @@ html {
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
 }
 
 .click {
-    padding: 5px;
+    padding: 2px;
     border: 2px solid rgb(11, 121, 11);
 }
 
 .img-pan:hover {
-    padding: 5px;
+    padding: 2px;
     border: 2px solid green;
 }
 
@@ -166,7 +169,7 @@ html {
     background-color: var(--color-green);
     margin: auto;
     font-size: 20px;
-    margin-top: 1.5em;
+    margin-top: 2em;
     width: 8em;
     display: block;
     padding: 5px;
@@ -221,8 +224,9 @@ html {
 .show-item2 {
     width: 70%;
     height: 5em;
-    background-color: #ffffff;
-    border: 2px solid rgb(204, 194, 60);
+    background-color: #f3f1f1;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    border-top: 8px solid rgb(253, 246, 148);
     border-radius: 8px;
     margin: auto;
     display: grid;
@@ -232,10 +236,11 @@ html {
     place-content: center;
     margin-bottom: 1em;
     margin-top: 2em;
+    color: #637299;
 }
 
 .form-pan {
-    width: 40%;
+    width: 50%;
     height: 60px;
     margin: auto;
     display: grid;
@@ -243,6 +248,10 @@ html {
     gap: 5px;
     place-items: center;
     place-content: center;
+}
+
+.img-pan2 {
+    width: 50px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -261,6 +270,12 @@ html {
     .show-item h2.people {
         font-size: 2.5em;
         color: rgb(240, 221, 49);
+    }
+    .show-item2 {
+        font-size: 9px;
+    }
+    .img-pan2 {
+        width: 35px;
     }
 }
 
@@ -295,7 +310,7 @@ html {
     }
 
     .form-control {
-        height: 800px;
+        height: 900px;
         width: 90%;
     }
 
@@ -343,6 +358,16 @@ html {
     .show-item h2.people {
         font-size: 1.2em;
         color: rgb(240, 221, 49);
+    }
+    .img-pan {
+        width: 80px;
+        height: 80px;
+    }
+    .show-item2 {
+        font-size: 5px;
+    }
+    .img-pan2 {
+        width: 20px;
     }
 }
 
