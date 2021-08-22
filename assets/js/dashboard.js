@@ -72,7 +72,7 @@ function selectType(type){
     let selectMajor = document.createElement('select')
     selectMajor.id ="selectMajorID"
     selectMajor.setAttribute('onchange','getCommentByMajor(this.value);');
-    selectMajor.innerHTML ='<option value="1" selected>วิทยาการคอมพิวเตอร์ (CS)</option><option value="2">เทคโนโลยีสารสนเทศ (IT)</option><option value="3">ภูมิสารสนเทศศาสตร์ (GIS)</option>'
+    selectMajor.innerHTML ='<option value="" disabled selected>สาขาวิชา</option><option value="1">วิทยาการคอมพิวเตอร์ (CS)</option><option value="2">เทคโนโลยีสารสนเทศ (IT)</option><option value="3">ภูมิสารสนเทศศาสตร์ (GIS)</option>'
     blog.appendChild(selectMajor)
   }
   else if(type==3){
