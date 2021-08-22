@@ -110,7 +110,7 @@ label {
 @media screen and (max-width: 1200px) {
     .login{
         width: 70%;
-        height: 30vh;
+        height: 50vh;
         margin-top: 10em;
     }
   }
