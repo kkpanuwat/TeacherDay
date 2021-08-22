@@ -18,11 +18,12 @@ html {
 .container {
     width: 80vw;
     margin: 0 auto;
-    margin-top: -5em;
+    margin-top: -8em;
 }
 .svg-text2 {
-  font-size: 13px;
+  font-size: 50px;
   fill: rgb(247, 247, 247);
+  text-shadow: 2px 2px 1px gray;
 }
 
 .form-control {
@@ -41,13 +42,15 @@ select {
   padding: 8px;
   border-radius: 8px;
   margin: 10px;
-  box-shadow: 0px 4px 8px rgb(190, 190, 190);
+  box-shadow: 0px 2px 5px rgb(87, 86, 86);
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 2em;
+    border-top: solid 6px rgb(245, 207, 41);
+    border-radius: 8px ;
     
   }
   
@@ -57,6 +60,7 @@ table {
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
+  
   .btn-trash {
     background-color: rgb(230, 86, 93);
     border-radius: 8px;
@@ -83,8 +87,9 @@ table {
   }
 
   .pager {
-      width: 36%;
-      margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
   }
 
 
