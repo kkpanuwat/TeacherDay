@@ -28,6 +28,10 @@ html {
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
+.svg-text2 {
+    font-size: 13px;
+    fill: rgb(255, 255, 255);
+}
 
 @keyframes form {
     from {
