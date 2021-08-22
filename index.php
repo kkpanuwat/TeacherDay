@@ -18,7 +18,7 @@
     </svg>
 
     <div class="container">
-        <h1 class="svg-text">พิธีไหว้ครูออนไลน์ค่ะ</h1>
+        <h1 class="svg-text">พิธีไหว้ครูออนไลน์</h1>
         <div class="form-control">
             <div class="form">
                 <div class="form-left">
