@@ -22,6 +22,7 @@ html {
 
 .form-control {
     width: 90%;
+    margin: 0 auto;
    
 }
 table {
@@ -36,4 +37,49 @@ table {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+  }
+  .btn-trash {
+    background-color: rgb(230, 86, 93);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn-trash:hover {
+    background-color: rgb(167, 54, 60);
+  }
+  .button {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+
+  .pager {
+      width: 36%;
+      margin: 0 auto;
+  }
+
+
+  ul li {
+      display: inline;
+      list-style: none;
+  }
+
+  .input-page {
+      width: 35px;
+      border-radius: 8px;
+      border: 1px solid gray;
+  }
+  
+  .button:hover {
+    background-color: #f1f1f1;
   }
