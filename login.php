@@ -10,11 +10,9 @@
 </head>
 
 <body>
-<svg class="svg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <image href="assets/imgs/logo-login.jpg" x="35%" height="340" width="340"/>
-</svg>
+<img class="img-mb" src="assets/imgs/icon.png" alt="">
     <div class="container">
-    
+        
         <div class="login">
             <div class="left"><img class="img_login" src="./assets/imgs/logo-login.jpg" alt=""></div> 
             <div class="right">
