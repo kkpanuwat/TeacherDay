@@ -70,7 +70,7 @@
             </div>
             <label style="text-align: center; display:block; margin:20px" for="commentName">เลือกพานดอกไม้</label>
             <div class="form-pan">
-                <img class="img-pan" id="pan1" onclick="clickpan('pan1')" src="assets/imgs/pan01.png" alt="">
+                <img class="img-pan click" id="pan1" onclick="clickpan('pan1')" src="assets/imgs/pan01.png" alt="">
                 <img class="img-pan" id="pan2" onclick="clickpan('pan2')" src="assets/imgs/pan02.png" alt="">
                 <img class="img-pan" id="pan3" onclick="clickpan('pan3')" src="assets/imgs/pan03.png" alt="">
             </div>

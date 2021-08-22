@@ -15,7 +15,7 @@
 <body onload="getAllComment()">
     <div class="container">
         <div class="search" id="searchBlog">
-            <select name="selecttype" onchange="selectType(this.value)">
+            <select class="search-select" name="selecttype" onchange="selectType(this.value)">
                 <option value="1">ค้นหาทั้งหมด</option>
                 <option value="2">ค้นหาจากสาขาวิชา</option>
                 <option value="3">ค้นหาจากรายชื่ออาจารย์</option>
