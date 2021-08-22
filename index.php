@@ -78,7 +78,7 @@
         <hr>
         <div class="show-control">
             <div class="show-item">
-                <h2>จำนวนผู้ส่งคำอวยพรทั้งหมด &nbsp;<h2 id="numrows" class="people">&nbsp; 500 คน</h2>
+                <h2>จำนวนผู้ส่งคำอวยพรทั้งหมด &nbsp;<h2 id="numrows" class="people"></h2>
                 </h2>
             </div>
             <h3>ผู้ร่วมอวยพรใหม่</h3>
