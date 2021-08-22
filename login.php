@@ -10,10 +10,15 @@
 </head>
 
 <body>
+<svg class="svg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <image href="assets/imgs/logo-login.jpg" x="35%" height="340" width="340"/>
+</svg>
     <div class="container">
+    
         <div class="login">
-            <div class="left"><img class="img_login" src="./assets/imgs/pan01.PNG" alt=""></div>
+            <div class="left"><img class="img_login" src="./assets/imgs/logo-login.jpg" alt=""></div> 
             <div class="right">
+                <div class="formja">
                 <form action="./function/loginController.php" method="post">
                     <div class="topic">Login</div>
                     <label for="">Username</label>
@@ -26,6 +31,7 @@
                     <br>
                     <button class="btn-submit" type="submit">Login</button>
             </div>
+        </div>
             </form>
         </div>
     </div>

@@ -16,7 +16,9 @@ html {
     font-family: 'Prompt', sans-serif;
 }
 
-
+.svg-logo {
+    display: none;
+}
 .container {
     width: 80vw;
     height: 100vh;
@@ -24,20 +26,25 @@ html {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    
 }
 
 .login{
     box-shadow: 0 5px 8px rgb(189, 189, 189);
-    width: 80%;
-    height: 80vh;;
+    width: 70%;
+    height: 70vh;;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
+.img-mb {
+    display: none;
+}
+
 .img_login {
-    width: 50%;
+    width: 80%;
 }
 
 .left {
@@ -48,18 +55,37 @@ html {
 
 .topic {
     text-align: center;
+    font-size: xx-large;
+    color: white;
+}
+label {
+    color: white;
 }
 
 .right {
-    padding: 20px;
+    padding: 10px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: rgb(18, 79, 150);
+}
+
+.formja {
+    width: 80%;
 }
 
 .inputText{
     width: 100%;
-    height: 50px;
+    padding: 5px;
+    height: 45px;
     border: 1px solid gray;
     outline: none;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .inputText:focus{
@@ -67,7 +93,7 @@ html {
 }
 
 .btn-submit {
-    margin-top: 10px;
+    margin-top: 20px;
     width: 100%;
     background-color: var(--color-green);
     border: 1px solid transparent;
@@ -80,3 +106,37 @@ html {
 .btn-submit:focus {
     outline: none;
 }
+
+@media screen and (max-width: 1200px) {
+    .login{
+        width: 70%;
+        height: 30vh;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .login{
+        width: 100%;
+        height: 50vh;
+        grid-template-columns: 1fr;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        border-radius: 10px;
+
+    }
+    .img-mb {
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+    }
+    .container {
+        margin-top: -3em;        
+    }
+    .svg-logo {
+        display:inline;
+    }
+  }
