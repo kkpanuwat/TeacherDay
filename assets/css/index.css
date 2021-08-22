@@ -334,6 +334,9 @@ html {
         font-size: 2.5em;
         color: rgb(240, 221, 49);
     }
+    .show-item2 {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -345,7 +348,7 @@ html {
 
     .show-item {
         width: 100%;
-        height: 4.5em;
+        height: 3.5em;
     }
 
     .show-item h2 {
@@ -364,10 +367,14 @@ html {
         height: 80px;
     }
     .show-item2 {
-        font-size: 5px;
+        font-size: 5px;          
+        width: 100%;
     }
     .img-pan2 {
         width: 20px;
+    }
+    .newcomment {
+        font-size: 10px;
     }
 }
 

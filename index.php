@@ -81,7 +81,7 @@
                 <h2>จำนวนผู้ส่งคำอวยพรทั้งหมด &nbsp;<h2 id="numrows" class="people"></h2>
                 </h2>
             </div>
-            <h3>ผู้ร่วมอวยพรใหม่</h3>
+            <h3 class="newcomment">ผู้ร่วมอวยพรใหม่</h3>
             <div id="result"></div>
         </div>
     </div>
