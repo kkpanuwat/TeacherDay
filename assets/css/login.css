@@ -129,10 +129,11 @@ label {
     }
     .right {
         border-radius: 10px;
+        
 
     }
     .container {
-        margin-top: -1em;
+        margin-top: 9em;
     }
     .img-mb {
         display: flex;

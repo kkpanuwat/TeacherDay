@@ -86,6 +86,7 @@
             </div>
             <h3 class="newcomment">ผู้ร่วมอวยพรใหม่</h3>
             <div id="result"></div>
+            <a class="next" href="allcomment/index.php">ดูผู้ร่วมอวยพรทั้งหมด</a>
             <!-- kkkk -->
         </div>
     </div>

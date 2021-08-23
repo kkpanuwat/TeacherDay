@@ -183,6 +183,11 @@ footer {
 text-align: center;
 vertical-align: middle;
 }
+.next {
+    color: #233E8B;
+    text-align: center;
+    display: block;
+}
 
 
 @media screen and (max-width: 1200px) {
