@@ -26,7 +26,7 @@
                     <br>
                     <label for="">Password</label>
                     <br>
-                    <input type="password" class="inputText" name="password" placeholder="password">
+                    <input type="password" class="inputText" name="password" placeholder="password">          
                     <br>
                     <button class="btn-submit" type="submit">Login</button>
             </div>
