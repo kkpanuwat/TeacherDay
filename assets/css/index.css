@@ -18,10 +18,23 @@ html {
 
 .svg-text {
     font-size: 4em;
-    margin-top: -2em;
+    margin-top: -3em;
     text-align: center;
     color: #233E8B;
     text-shadow: #97a8d6 2px 2px 1px;
+    margin-bottom: 10px;
+    position: relative;
+    animation-name: form;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.svg-textsaka {
+    font-size: 1.2em;
+    margin-top: -1em;
+    text-align: center;
+    color: #50545e;
+    /* text-shadow: #97a8d6 2px 2px 1px; */
     margin-bottom: 10px;
     position: relative;
     animation-name: form;
@@ -281,7 +294,6 @@ html {
     .img-pan2 {
         width: 35px;
     }
-}
 
 
 @media screen and (max-width: 870px) {
@@ -341,6 +353,9 @@ html {
     .show-item2 {
         width: 90%;
     }
+    .svg-textsaka {
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -348,6 +363,9 @@ html {
         font-size: 1.5em;
         margin-top: -1em;
 
+    }
+    .form-control {
+        margin-left: -2%;
     }
 
     .show-item {
@@ -379,6 +397,9 @@ html {
     }
     .newcomment {
         font-size: 10px;
+    }
+    .svg-textsaka {
+        font-size: 0.8em;
     }
 }
 
