@@ -80,8 +80,7 @@
         <hr>
         <div class="show-control">
             <div class="show-item">
-                <h2>จำนวนผู้ส่งคำอวยพรทั้งหมด &nbsp;<h2 id="numrows" class="people"></h2>
-                </h2>
+                <h2>จำนวนผู้ส่งคำอวยพรทั้งหมด &nbsp;<h2 id="numrows" class="people"></h2></h2>
             </div>
             <h3 class="newcomment">ผู้ร่วมอวยพรใหม่</h3>
             <div id="result"></div>

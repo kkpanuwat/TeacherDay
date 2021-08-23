@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/icon.PNG">
-    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/imgs/icon.PNG">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 
 <body>
@@ -15,10 +15,10 @@
     <div class="container">
         
         <div class="login">
-            <div class="left"><img class="img_login" src="./assets/imgs/logo-login.jpg" alt=""></div> 
+            <div class="left"><img class="img_login" src="../assets/imgs/logo-login.jpg" alt=""></div> 
             <div class="right">
                 <div class="formja">
-                <form action="./function/loginController.php" method="post">
+                <form action="../function/loginController.php" method="post">
                     <div class="topic">Login</div>
                     <label for="">Username</label>
                     <br>

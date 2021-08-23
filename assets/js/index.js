@@ -125,7 +125,7 @@ function getAllComment() {
       document.getElementById("result").innerHTML = xmlhttp.responseText;
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("numrows").innerHTML = xmlhttp.responseText;
+          document.getElementById("numrows").innerHTML = xmlhttp.responseText + " คน";
         }
       };
       let url = "./function/comment/commentController.php?getNumRow";

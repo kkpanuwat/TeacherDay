@@ -27,7 +27,7 @@ if (isset($_GET['allComment'])) {
     $sql = "SELECT * FROM comment ORDER BY comment_id DESC LIMIT 5";
     $result = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_array($result)) {
-        echo '<div class="show-item2"><h3>' . $row['name'] . '</h3> <h3>ได้ร่วมอวยพรแล้ว</h3> <img class="img-pan2" src="./assets/imgs/pan0' . $row["tray"] . '.png" alt="pan"><h3>'.$row['time_stamp'].'</h3></div>';
+        echo '<div class="show-item2"><h3>' . $row['name'] . '</h3> <h3>ได้ร่วมอวยพรแล้ว</h3> <img class="img-pan2" src="./assets/imgs/pan0' . $row["tray"] . '.png" alt="pan"><h3>' . $row['time_stamp'] . '</h3></div>';
     }
 }
 
@@ -40,7 +40,6 @@ if (isset($_GET['allCommentDashboard'])) {
     } else {
         $page = $_GET['pagenumber'];
         $numpage = $page * 25;
-        echo '<script>alert("Hello")</script>';
     }
     $num = 0;
     echo '
@@ -69,20 +68,26 @@ if (isset($_GET['allCommentDashboard'])) {
     }
     echo '</table>';
     $btnPrevious = '';
+    $btnNext = '';
     if ($page != 0) {
         $btnPrevious = '            
     <li>
         <button class="button" onclick="changePage(' . ($page - 1) . ')">Previous</button>
     </li>';
     }
+    if ($page + 1 != (floor((mysqli_num_rows($result) / 25)) + 1)) {
+        $btnNext =
+            '<li>
+        <button class="button" onclick="changePage(' . ($page + 1) . ')">Next</button>
+    </li>';
+    }
+    // if($pa)
     echo '            
     <div class="pager">
         <ul>
-            <li>Page <input class="input-page" onchange=changePage(this.value) readonly type="number" value="' . ($page + 1) . '" max="2" min="1"> of ' . (floor((mysqli_num_rows($result) / 25)) + 1) . '</li>
+            <li>Page <input class="input-page" onchange=changePage(this.value) readonly type="number" value="' . ($page + 1) . '"> of ' . (floor((mysqli_num_rows($result) / 25)) + 1) . '</li>
             ' . $btnPrevious . '
-            <li>
-                <button class="button" onclick="changePage(' . ($page + 1) . ')">Next</button>
-            </li>
+            ' . $btnNext . '
         </ul>
     </div>';
 }
@@ -98,14 +103,13 @@ if (isset($_POST['deleteComment'])) {
 if (isset($_GET['commentByMajor'])) {
     $majorID = $_GET['major'];
     $sql = "SELECT * FROM comment JOIN teacher ON teacher.teacher_id = comment.teacher_id WHERE comment.major = '$majorID' ";
-    $result= mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
     if (!isset($_GET['pagenumber'])) {
         $page  = 0;
         $numpage = 0;
     } else {
         $page = $_GET['pagenumber'];
         $numpage = $page * 25;
-        echo '<script>alert("Hello")</script>';
     }
     $num = 0;
     echo '
@@ -134,20 +138,26 @@ if (isset($_GET['commentByMajor'])) {
     }
     echo '</table>';
     $btnPrevious = '';
+    $btnNext = '';
     if ($page != 0) {
         $btnPrevious = '            
     <li>
         <button class="button" onclick="changePage(' . ($page - 1) . ')">Previous</button>
     </li>';
     }
+    if ($page + 1 != (floor((mysqli_num_rows($result) / 25)) + 1)) {
+        $btnNext =
+            '<li>
+        <button class="button" onclick="changePage(' . ($page + 1) . ')">Next</button>
+    </li>';
+    }
+    // if($pa)
     echo '            
     <div class="pager">
         <ul>
-            <li>Page <input class="input-page" onchange=changePage(this.value) readonly type="number" value="' . ($page + 1) . '" max="2" min="1"> of ' . (floor((mysqli_num_rows($result) / 25)) + 1) . '</li>
+            <li>Page <input class="input-page" onchange=changePage(this.value) readonly type="number" value="' . ($page + 1) . '"> of ' . (floor((mysqli_num_rows($result) / 25)) + 1) . '</li>
             ' . $btnPrevious . '
-            <li>
-                <button class="button" onclick="changePage(' . ($page + 1) . ')">Next</button>
-            </li>
+            ' . $btnNext . '
         </ul>
     </div>';
 }
@@ -156,16 +166,15 @@ if (isset($_GET['commentByMajor'])) {
 
 if (isset($_GET['commentByTeacher'])) {
     $majorID = $_GET['major'];
-    $teacher_id =$_GET['teacher_id'];
+    $teacher_id = $_GET['teacher_id'];
     $sql = "SELECT * FROM comment JOIN teacher ON teacher.teacher_id = comment.teacher_id WHERE comment.major = '$majorID' and comment.teacher_id = $teacher_id";
-    $result= mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
     if (!isset($_GET['pagenumber'])) {
         $page  = 0;
         $numpage = 0;
     } else {
         $page = $_GET['pagenumber'];
         $numpage = $page * 25;
-        echo '<script>alert("Hello")</script>';
     }
     $num = 0;
     echo '
@@ -194,20 +203,84 @@ if (isset($_GET['commentByTeacher'])) {
     }
     echo '</table>';
     $btnPrevious = '';
+    $btnNext = '';
     if ($page != 0) {
         $btnPrevious = '            
     <li>
         <button class="button" onclick="changePage(' . ($page - 1) . ')">Previous</button>
     </li>';
     }
+    if ($page + 1 != (floor((mysqli_num_rows($result) / 25)) + 1)) {
+        $btnNext =
+            '<li>
+        <button class="button" onclick="changePage(' . ($page + 1) . ')">Next</button>
+    </li>';
+    }
+    // if($pa)
     echo '            
     <div class="pager">
         <ul>
-            <li>Page <input class="input-page" onchange=changePage(this.value) readonly type="number" value="' . ($page + 1) . '" max="2" min="1"> of ' . (floor((mysqli_num_rows($result) / 25)) + 1) . '</li>
+            <li>Page <input class="input-page" onchange=changePage(this.value) readonly type="number" value="' . ($page + 1) . '"> of ' . (floor((mysqli_num_rows($result) / 25)) + 1) . '</li>
             ' . $btnPrevious . '
-            <li>
-                <button class="button" onclick="changePage(' . ($page + 1) . ')">Next</button>
-            </li>
+            ' . $btnNext . '
+        </ul>
+    </div>';
+}
+
+
+if (isset($_GET['allCommentStudent'])) {
+    $sql = "SELECT * FROM comment order by comment_id DESC";
+    $result = mysqli_query($conn, $sql);
+    if (!isset($_GET['pagenumber'])) {
+        $page  = 0;
+        $numpage = 0;
+    } else {
+        $page = $_GET['pagenumber'];
+        $numpage = $page * 25;
+    }
+    $num = 0;
+    echo '
+    <table>   
+    <tr>
+        <th>ลำดับ</th>
+        <th>ชื่อผู้ส่ง</th>
+        <th>พาน</th>
+        <th>วันที่ส่ง</th>
+    </tr>';
+    while ($row = mysqli_fetch_array($result)) {
+        if ($num >= $numpage && $num <= $numpage + 24) {
+            echo '
+        <tr>
+            <td>' . ($num + 1) . '</td>
+            <td>' . $row['name'] . '</td>
+            <td><img class="img-pan2" src="../assets/imgs/pan0' . $row["tray"] . '.png" alt="pan"></td>
+            <td>' . $row['time_stamp'] . '</td>
+        </tr>';
+        }
+        $num++;
+    }
+    echo '</table>';
+    $btnPrevious = '';
+    $btnNext = '';
+    if ($page != 0) {
+        $btnPrevious = '            
+    <li>
+        <button class="button" onclick="changePage(' . ($page - 1) . ')">Previous</button>
+    </li>';
+    }
+    if ($page+1 != (floor((mysqli_num_rows($result) / 25)) + 1)) {
+        $btnNext = 
+    '<li>
+        <button class="button" onclick="changePage(' . ($page + 1) . ')">Next</button>
+    </li>';
+    }
+    // if($pa)
+    echo '            
+    <div class="pager">
+        <ul>
+            <li>Page <input class="input-page" onchange=changePage(this.value) readonly type="number" value="' . ($page + 1) . '"> of ' . (floor((mysqli_num_rows($result) / 25)) + 1) . '</li>
+            ' . $btnPrevious . '
+            '.$btnNext.'
         </ul>
     </div>';
 }
