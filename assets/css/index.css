@@ -247,7 +247,7 @@ html {
     border-radius: 8px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 5px;
     place-items: center;
     place-content: center;
@@ -294,6 +294,7 @@ html {
     .img-pan2 {
         width: 35px;
     }
+}
 
 
 @media screen and (max-width: 870px) {
