@@ -239,6 +239,7 @@ if (isset($_GET['allCommentStudent'])) {
         $numpage = $page * 25;
     }
     $num = 0;
+    $allnum = mysqli_num_rows($result);
     echo '
     <table>   
     <tr>
@@ -251,13 +252,14 @@ if (isset($_GET['allCommentStudent'])) {
         if ($num >= $numpage && $num <= $numpage + 24) {
             echo '
         <tr>
-            <td>' . ($num + 1) . '</td>
+            <td>' . ($allnum) . '</td>
             <td>' . $row['name'] . '</td>
             <td><img class="img-pan2" src="../assets/imgs/pan0' . $row["tray"] . '.png" alt="pan"></td>
             <td>' . $row['time_stamp'] . '</td>
         </tr>';
         }
         $num++;
+        $allnum--;
     }
     echo '</table>';
     $btnPrevious = '';

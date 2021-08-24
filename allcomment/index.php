@@ -15,7 +15,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <!-- <path fill="#F4D160" fill-opacity="1" d="M0,64L80,101.3C160,139,320,213,480,213.3C640,213,800,139,960,112C1120,85,1280,107,1360,117.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path> -->
         <image href="http://cad.kku.ac.th/wp-content/uploads/2018/05/Th_color.png" width="45" x="95%" y="15" />
-        <image href="assets/logocs.png" width="75" x="89%" y="12" />
+        <image href="../assets/logocs.png" width="75" x="89%" y="12" />
     </svg>
 
     <div class="container">
