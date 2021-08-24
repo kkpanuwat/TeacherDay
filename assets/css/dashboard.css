@@ -143,11 +143,19 @@ ul li {
   select {
     margin-top: 2em;
   }
+<<<<<<< HEAD
 }
 
 @media screen and (max-width: 800px) {
   select {
     margin-top: 5em;
+=======
+  
+  th, td {
+    text-align: left !important;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+>>>>>>> d2377a8e937f19ec09aa3cc3c43d98dbf660db5c
   }
 
   th,
