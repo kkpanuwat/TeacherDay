@@ -107,7 +107,7 @@ function getTeacher() {
   teacherObject.innerHTML = null;
   let all_teacher = document.createElement("option");
   all_teacher.value = 1;
-  all_teacher.innerHTML = "อาจารย์ทุกท่าน";
+  all_teacher.innerHTML = "อาจารย์ทุกท่านในสาขาวิชา ฯ";
   teacherObject.appendChild(all_teacher);
   teacher.forEach((element) => {
     let teacer_item = document.createElement("option");
