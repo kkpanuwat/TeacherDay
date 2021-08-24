@@ -165,7 +165,7 @@ function getTeacher(value) {
   let all_teacher = document.createElement("option");
   teacherObject.setAttribute("onchange", "getCommentByTeacher("+teacherId+",this.value);");
   all_teacher.value = 1;
-  all_teacher.innerHTML = "อาจารย์ทุกท่านในสาขาวิชา ฯ";
+  all_teacher.innerHTML = "อาจารย์ทุกท่านในสาขาวิชาฯ";
   teacherObject.appendChild(all_teacher);
   teacher.forEach((element) => {
     let teacer_item = document.createElement("option");
