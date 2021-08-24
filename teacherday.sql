@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2021 at 07:34 PM
+-- Generation Time: Aug 24, 2021 at 10:34 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -44,11 +44,11 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`comment_id`, `std_id`, `name`, `grade`, `comment`, `major`, `tray`, `teacher_id`, `time_stamp`) VALUES
-(7, '613020892-2', 'Narattha', 1, 'HBD', 'เทคโนโลยีสารสนเทศ (IT)', 1, 0, '2021-08-21 16:21:15'),
-(8, '613020024-1', 'Panuwat', 2, 'ขอให้อาจารย์สุขภาพแข็งแรงนะครับ', 'เทคโนโลยีสารสนเทศ (IT)', 1, 0, '2021-08-21 16:21:15'),
-(9, '613020024-1', 'ภานุวัฒน์ ยี่สุ่นซ้อน', 2, 'เลิกสอนง่วง', '2', 1, 0, '2021-08-21 16:22:34'),
-(10, '613020533-0', 'Supawadee', 2, 'พักกกกกกก', '2', 1, 17, '2021-08-21 16:27:50'),
-(11, '613020024-1', 'Panuwat', 1, 'sssss', '1', 1, 5, '2021-08-21 17:30:22');
+(101, '613020024-1', 'ภานุวัฒน์ ยี่สุ่นซ้อน', 1, 'ขอให้อาจารย์สุขภาพแข็งแรงนะครับ :)', '2', 1, 19, '2021-08-24 07:15:47'),
+(102, '613020533-0', 'สุภาวดี แย้มพุฒ', 2, 'ขอให้อาจารย์สุขภาพแข็งแรงค่ะ', '1', 2, 1, '2021-08-24 07:16:21'),
+(103, '613020514-4', 'ธนิดา สุภาชาติ', 3, 'ขอให้อาจารย์สุขภาพแข็งแรงมาก ๆ นะคะ', '3', 3, 31, '2021-08-24 07:17:07'),
+(104, '613020024-1', 'ธนรัชต์ อาจประโคน', 2, 'ขอให้อาจารย์สุขภาพแข็งแรงมากๆครับ', '1', 2, 28, '2021-08-24 07:17:48'),
+(105, '613020024-1', 'ธีพงษ์ ทะวงษ์ษา', 2, ':))', '3', 2, 1, '2021-08-24 07:22:40');
 
 -- --------------------------------------------------------
 
@@ -66,7 +66,7 @@ CREATE TABLE `teacher` (
 --
 
 INSERT INTO `teacher` (`teacher_id`, `teacher_name`) VALUES
-(1, 'อาจารย์ทุกท่าน'),
+(1, 'อาจารย์ทุกท่านในสาขาวิชาฯ'),
 (2, 'รศ.ดร.ศาสตรา   วงศ์ธนวสุ'),
 (3, 'รศ.ดร.สิรภัทร   เชี่ยวชาญวัฒนา'),
 (4, 'รศ.ดร.ปัญญาพล   หอระตะ'),
@@ -100,6 +100,24 @@ INSERT INTO `teacher` (`teacher_id`, `teacher_name`) VALUES
 (32, 'อาจารย์   ศรัณย์   อภิชนตระกูล'),
 (33, 'อาจารย์   ศักดิ์พจน์   ทองเลี่ยมนาค');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `username` varchar(200) NOT NULL,
+  `password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `password`) VALUES
+('CSskku', '4ebb1156016a5ffdf3fc4df582829cf2');
+
 --
 -- Indexes for dumped tables
 --
@@ -117,6 +135,12 @@ ALTER TABLE `teacher`
   ADD PRIMARY KEY (`teacher_id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -124,7 +148,7 @@ ALTER TABLE `teacher`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT for table `teacher`
