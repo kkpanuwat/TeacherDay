@@ -36,6 +36,7 @@
         <div class="form-control" id="result">
         </div>
 <a href="../logout.php" class="btn-lg" ><i class="las la-sign-out-alt"></i></a>
+<a onclick="createCSV()" class="btn-download" ><i class="las la-download"></i></a>
     </div>
 </body>
 

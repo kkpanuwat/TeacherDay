@@ -190,3 +190,16 @@ function getCommentByTeacher(major_id,teacher_id){
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send();
 }
+
+
+function createCSV(){
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      window.open('../function/data.csv','_self')
+    }
+  };
+  let url ="../function/createCSV.php";
+  xmlhttp.open("GET", url, true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send();
+}
